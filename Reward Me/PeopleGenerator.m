@@ -58,17 +58,7 @@
 
 
 
--(Person*) getPerson {
-    Person *thePerson;
-    thePerson = [[Person alloc] init];
-    
-    thePerson.firstName = @"peter";
-    thePerson.lastName = @"parker";
-    thePerson.birthday = @"3 Nov 1982";
-    
-    return thePerson;
-    
-}
+
 
 @end
 

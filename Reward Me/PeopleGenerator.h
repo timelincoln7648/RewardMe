@@ -15,7 +15,6 @@
 
 //methods
 
--(Person*) getPerson;
 
 -(NSMutableArray*) getPeopleArray;
 
