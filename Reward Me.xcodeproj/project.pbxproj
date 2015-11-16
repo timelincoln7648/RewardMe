@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB62A8A1BF5024C008C13F7 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB62A891BF5024C008C13F7 /* Car.m */; };
+		2BB62A8D1BF5443A008C13F7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB62A8C1BF5443A008C13F7 /* Person.m */; };
+		2BB62A901BF54547008C13F7 /* PeopleGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB62A8F1BF54547008C13F7 /* PeopleGenerator.m */; };
 		CBF135851BE163DB0089EF6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF135841BE163DB0089EF6B /* main.m */; };
 		CBF135881BE163DB0089EF6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF135871BE163DB0089EF6B /* AppDelegate.m */; };
 		CBF1358B1BE163DB0089EF6B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF1358A1BE163DB0089EF6B /* ViewController.m */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BB62A881BF5024C008C13F7 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		2BB62A891BF5024C008C13F7 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		2BB62A8B1BF5443A008C13F7 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		2BB62A8C1BF5443A008C13F7 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2BB62A8E1BF54547008C13F7 /* PeopleGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleGenerator.h; sourceTree = "<group>"; };
+		2BB62A8F1BF54547008C13F7 /* PeopleGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleGenerator.m; sourceTree = "<group>"; };
 		CBF135801BE163DB0089EF6B /* Reward Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reward Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF135841BE163DB0089EF6B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CBF135861BE163DB0089EF6B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +71,12 @@
 				CBF135871BE163DB0089EF6B /* AppDelegate.m */,
 				CBF135891BE163DB0089EF6B /* ViewController.h */,
 				CBF1358A1BE163DB0089EF6B /* ViewController.m */,
+				2BB62A8B1BF5443A008C13F7 /* Person.h */,
+				2BB62A8C1BF5443A008C13F7 /* Person.m */,
+				2BB62A8E1BF54547008C13F7 /* PeopleGenerator.h */,
+				2BB62A8F1BF54547008C13F7 /* PeopleGenerator.m */,
+				2BB62A881BF5024C008C13F7 /* Car.h */,
+				2BB62A891BF5024C008C13F7 /* Car.m */,
 				CBF1358C1BE163DB0089EF6B /* Main.storyboard */,
 				CBF1358F1BE163DB0089EF6B /* Assets.xcassets */,
 				CBF135911BE163DB0089EF6B /* LaunchScreen.storyboard */,
@@ -151,6 +166,9 @@
 			files = (
 				CBF1358B1BE163DB0089EF6B /* ViewController.m in Sources */,
 				CBF135881BE163DB0089EF6B /* AppDelegate.m in Sources */,
+				2BB62A901BF54547008C13F7 /* PeopleGenerator.m in Sources */,
+				2BB62A8D1BF5443A008C13F7 /* Person.m in Sources */,
+				2BB62A8A1BF5024C008C13F7 /* Car.m in Sources */,
 				CBF135851BE163DB0089EF6B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +316,7 @@
 				CBF135991BE163DB0089EF6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
