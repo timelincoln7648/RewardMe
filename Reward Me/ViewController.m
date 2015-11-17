@@ -11,6 +11,8 @@
 #import "AppsaholicSDK.h"
 
 NSString *const API_KEY = @"94732d9072210f4e1485f8097f08deff018652f5";
+NSString *const POOT_EVENT = @"2d0472482c7223ec38d811f0dd3283f9bcd7ca38";
+BOOL custom = true;
 
 @interface ViewController ()
 
@@ -30,12 +32,13 @@ NSString *const API_KEY = @"94732d9072210f4e1485f8097f08deff018652f5";
 
 - (IBAction)changePersonButton {
     NSLog(@"\nchanging person");
-    
-    //TODO - test perk portal opening
+    [self changePerson];
+}
+
+- (IBAction)openPortalPressed:(id)sender {
     
     [[AppsaholicSDK sharedManager] showPortal];
     
-    //[self changePerson];
 }
 
 - (void)viewDidLoad {
@@ -100,15 +103,36 @@ NSString *const API_KEY = @"94732d9072210f4e1485f8097f08deff018652f5";
     if ([currentName containsString:@"Poot"]) {
         NSLog(@"\nCongratulations! You found the mystical Poot!");
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"You found the mystical Poot!" preferredStyle:UIAlertControllerStyleAlert];
         
-        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"omg I'm so lucky" style:UIAlertActionStyleDefault
-                                                              handler:^(UIAlertAction * action) {NSLog(@"\n\nclicked it");}];
+        NSString *uuid = [[NSUUID UUID] UUIDString];
         
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
+        [[AppsaholicSDK sharedManager] trackEvent:POOT_EVENT withSubID:uuid notificationType:custom withController:self withSuccess:^(BOOL success, NSString *notificationText, NSNumber *points) {
+            NSLog(@"%d",success );
+            if (success) {
+                NSLog(@"%@",notificationText);
+                NSLog(@"%@",points);
+            } }];
         
-    }
+         
+        }
+         
+         
+        
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Congratulations!" message:@"You found the mystical Poot!" preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"omg I'm so lucky" style:UIAlertActionStyleDefault
+//                                                              handler:^(UIAlertAction * action) {NSLog(@"\n\nclicked it");}];
+//        
+//        [alert addAction:defaultAction];
+//        [self presentViewController:alert animated:YES completion:nil];
+        
+    
+}
+
+-(void) rewardPoot {
+    
+    
+    
 }
 
 

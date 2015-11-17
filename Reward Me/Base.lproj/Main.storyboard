@@ -39,6 +39,14 @@
                                     <action selector="changePersonButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="avi-Ha-ipv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VC-J0-kUA">
+                                <rect key="frame" x="259" y="550" width="82" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Open Portal"/>
+                                <connections>
+                                    <action selector="openPortalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6GY-gi-2wl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -47,7 +55,9 @@
                             <constraint firstItem="s3I-pR-L5f" firstAttribute="top" secondItem="lls-qp-snK" secondAttribute="bottom" constant="54" id="7mE-T6-eOU"/>
                             <constraint firstItem="GFX-Y7-C6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D50-ZJ-q47"/>
                             <constraint firstItem="lls-qp-snK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbZ-ul-5IR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5VC-J0-kUA" secondAttribute="bottom" constant="20" id="IfK-mv-Wu5"/>
                             <constraint firstItem="s3I-pR-L5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NTy-qk-ILA"/>
+                            <constraint firstItem="5VC-J0-kUA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YTn-ru-EI8"/>
                             <constraint firstItem="GFX-Y7-C6J" firstAttribute="top" secondItem="s3I-pR-L5f" secondAttribute="bottom" constant="45" id="fSG-mT-IYm"/>
                         </constraints>
                     </view>
