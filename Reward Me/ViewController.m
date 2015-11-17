@@ -10,8 +10,15 @@
 #import "PeopleGenerator.h"
 #import "AppsaholicSDK.h"
 
+NSString *const API_KEY = @"94732d9072210f4e1485f8097f08deff018652f5";
 
 @interface ViewController ()
+
+@property (strong, nonatomic) UIViewController *appsaholic_rootViewController;
+//Not Required for Track Event call as there is a UIViewController Parameter.
+
+
+
 
 @end
 
@@ -23,13 +30,32 @@
 
 - (IBAction)changePersonButton {
     NSLog(@"\nchanging person");
-    [self changePerson];
+    
+    //TODO - test perk portal opening
+    
+    [[AppsaholicSDK sharedManager] showPortal];
+    
+    //[self changePerson];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //Appsaholic
+    //APPSAHOLIC
+    ((AppsaholicSDK*)[AppsaholicSDK sharedManager]).appsaholic_rootViewController = self;
+    
+   [[AppsaholicSDK sharedManager] startSession:API_KEY withSuccess:^(BOOL success, NSString* status)
+    { if (success) {
+       NSLog(@"\nAppsaholic session successfully started!");
+   } else {
+       NSLog(@"\nAppsaholic session failed to start.");
+   }
+        NSLog(@"\nStatus is %@", status);
+        
+    
+    
+    }];
+    
     
     
     [self setup];
