@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PeopleGenerator.h"
+#import "AppsaholicSDK.h"
 
 
 @interface ViewController ()
@@ -27,6 +28,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //Appsaholic
+    
+    
     [self setup];
     
 }
@@ -44,7 +49,7 @@
     for (int j = peopleArray.count-1; j >= 0 ; j--) {
         Person* person = peopleArray[j];
         
-        NSLog(@"person is: %@", person.firstName);
+        NSLog(@"person is: %@", [[person.firstName stringByAppendingString:@" "] stringByAppendingString:person.lastName]);
     } 
     
 }
@@ -55,7 +60,7 @@
     
     birthday.text = newPerson.birthday;
     name.text = [[newPerson.firstName stringByAppendingString:@" "] stringByAppendingString:newPerson.lastName];
-    NSLog(@"\nchanged the person :)");
+   // NSLog(@"\nchanged the person :)");
     
     [self checkIfPoot];
     
